@@ -58,6 +58,8 @@ The model.py file contains the code for training and saving the convolution neur
 
 Test NVIDIA's model from [here](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf).  This model will take in image of the shape (60,266,3) and dashboard images/training images are of size (160,320,3).
 
+![](nvidia-end-to-end-model.jpg)
+
 My model consists of a convolution neural network with 3x3 and 5x5 filter sizes and depths between 24 and 64 (model.py lines 78-101)
 
 The model includes ELU layers to introduce nonlinearity with Exponential Linear Unit (code 78~101), and the data is normalized in the model using a Keras lambda layer (code line 80).
