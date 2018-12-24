@@ -128,35 +128,47 @@ lambda_1 (Lambda)            (None, 160, 320, 3)       0
 _________________________________________________________________
 cropping2d_1 (Cropping2D)    (None, 65, 320, 3)        0
 _________________________________________________________________
-conv2d_1 (Conv2D)            (None, 65, 320, 64)       4864
+conv2d_1 (Conv2D)            (None, 31, 158, 24)       1824
 _________________________________________________________________
-activation_1 (Activation)    (None, 65, 320, 64)       0
+activation_1 (Activation)    (None, 31, 158, 24)       0
 _________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 21, 106, 64)       0
+conv2d_2 (Conv2D)            (None, 14, 77, 36)        21636
 _________________________________________________________________
-conv2d_2 (Conv2D)            (None, 21, 106, 128)      204928
+activation_2 (Activation)    (None, 14, 77, 36)        0
 _________________________________________________________________
-activation_2 (Activation)    (None, 21, 106, 128)      0
+conv2d_3 (Conv2D)            (None, 5, 37, 48)         43248
 _________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 7, 35, 128)        0
+activation_3 (Activation)    (None, 5, 37, 48)         0
 _________________________________________________________________
-conv2d_3 (Conv2D)            (None, 7, 35, 256)        819456
+conv2d_4 (Conv2D)            (None, 3, 35, 64)         27712
 _________________________________________________________________
-activation_3 (Activation)    (None, 7, 35, 256)        0
+activation_4 (Activation)    (None, 3, 35, 64)         0
 _________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 2, 11, 256)        0
+conv2d_5 (Conv2D)            (None, 1, 33, 64)         36928
 _________________________________________________________________
-flatten_1 (Flatten)          (None, 5632)              0
+activation_5 (Activation)    (None, 1, 33, 64)         0
 _________________________________________________________________
-dense_1 (Dense)              (None, 512)               2884096
+flatten_1 (Flatten)          (None, 2112)              0
 _________________________________________________________________
-activation_4 (Activation)    (None, 512)               0
+dense_1 (Dense)              (None, 100)               211300
 _________________________________________________________________
-dense_2 (Dense)              (None, 256)               131328
+activation_6 (Activation)    (None, 100)               0
 _________________________________________________________________
-activation_5 (Activation)    (None, 256)               0
+dropout_1 (Dropout)          (None, 100)               0
 _________________________________________________________________
-dense_3 (Dense)              (None, 1)                 257
+dense_2 (Dense)              (None, 50)                5050
+_________________________________________________________________
+activation_7 (Activation)    (None, 50)                0
+_________________________________________________________________
+dense_3 (Dense)              (None, 10)                510
+_________________________________________________________________
+activation_8 (Activation)    (None, 10)                0
+_________________________________________________________________
+dense_4 (Dense)              (None, 1)                 11
+_________________________________________________________________
+Total params: 348,219
+Trainable params: 348,219
+Non-trainable params: 0
 _________________________________________________________________
 
 The first layer normalizes the data using a Lambda function. The second layer crops out the regions of the image that do not capture the road. This simplifies the images in order to not confuse the network. The next 5 layers are 2D convolutions, with increasing numbers of filters each layer (except the last 2, which are both 64 filters). The first 3 layers have 5x5 convolutions, and the last 2 layers have 3x3 convolutions. All 5 layers utilize the ELU activation function
