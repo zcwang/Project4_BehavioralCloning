@@ -173,4 +173,6 @@ To augment the data sat, I also flipped images and angles thinking,
 
 Then I repeated this process on track two in order to get more data points.
 
+![](training.png)
+
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 2 as evidenced by its low overfitting in validation set.  I used an rmsprop optimizer so that manually training the learning rate wasn't necessary.
