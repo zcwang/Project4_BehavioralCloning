@@ -96,27 +96,27 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 The final model architecture (model.py lines 79-102 represented by Keras API) consisted of a convolution neural network with the following layers and layer sizes. Little changes to the original NVIDIA architecture by advices from co-worker's suggestions and my exercise.
 
-model.add(Lambda(lambda x: (x / 255.0) - 0.5, input_shape=(160,320,3)))
-model.add(Cropping2D(cropping=((70,25),(0,0))))
-model.add(Convolution2D(24,5,5,subsample=(2,2)))
-model.add(Activation('elu'))
-model.add(Convolution2D(36,5,5,subsample=(2,2)))
-model.add(Activation('elu'))
-model.add(Convolution2D(48,5,5,subsample=(2,2)))
-model.add(Activation('elu'))
-model.add(Convolution2D(64,3,3))
-model.add(Activation('elu'))
-model.add(Convolution2D(64,3,3))
-model.add(Activation('elu'))
-model.add(Flatten())
-model.add(Dense(100))
-model.add(Activation('elu'))
-model.add(Dropout(0.25))
-model.add(Dense(50))
-model.add(Activation('elu'))
-model.add(Dense(10))
-model.add(Activation('elu'))
-model.add(Dense(1))
+model.add(Lambda(lambda x: (x / 255.0) - 0.5, input_shape=(160,320,3)))<br>
+model.add(Cropping2D(cropping=((70,25),(0,0))))<br>
+model.add(Convolution2D(24,5,5,subsample=(2,2)))<br>
+model.add(Activation('elu'))<br>
+model.add(Convolution2D(36,5,5,subsample=(2,2)))<br>
+model.add(Activation('elu'))<br>
+model.add(Convolution2D(48,5,5,subsample=(2,2)))<br>
+model.add(Activation('elu'))<br>
+model.add(Convolution2D(64,3,3))<br>
+model.add(Activation('elu'))<br>
+model.add(Convolution2D(64,3,3))<br>
+model.add(Activation('elu'))<br>
+model.add(Flatten())<br>
+model.add(Dense(100))<br>
+model.add(Activation('elu'))<br>
+model.add(Dropout(0.25))<br>
+model.add(Dense(50))<br>
+model.add(Activation('elu'))<br>
+model.add(Dense(10))<br>
+model.add(Activation('elu'))<br>
+model.add(Dense(1))<br>
 
 Layer (type)                 Output Shape              Param #
 _________________________________________________________________
