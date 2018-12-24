@@ -195,4 +195,4 @@ Then I repeated this process on track two in order to get more data points.
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 2 as evidenced by its low overfitting in validation set.  I used an rmsprop optimizer so that manually training the learning rate wasn't necessary.
 
-The simulating dirving by my model, please refer ![](model_drive.mp4) Thanks!
+The simulating dirving by my model, please refer "model_drive.mp4" Thanks!
