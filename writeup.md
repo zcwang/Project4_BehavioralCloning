@@ -120,6 +120,8 @@ model.add(Dense(10))<br>
 model.add(Activation('elu'))<br>
 model.add(Dense(1))<br>
 
+![](crop.png) Cropping
+
 Layer (type)                 Output Shape              Param #
 _________________________________________________________________
 lambda_1 (Lambda)            (None, 160, 320, 3)       0
@@ -170,6 +172,10 @@ To augment the data sat, I also flipped images and angles thinking,
 - Randomly shuffled the data set.
 - Use OpenCV to convert to RGB for drive.py.
 - For steering angle associated with three images, I use correction factor for left and right images with correction factor of 0.2: increase the steering angle by 0.2 for left image and for the right one  decrease the steering angle by 0.2.
+
+![](left.jpg) Left FOV<br>
+![](center.jpg) Center FOV<br>
+![](right.jpg) Right FOV
 
 Then I repeated this process on track two in order to get more data points.
 
